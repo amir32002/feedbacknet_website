@@ -1,6 +1,7 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
+
 <style type="text/css">
 body {
 		font-weight:300;
@@ -110,7 +111,7 @@ body {
 <html>
   <head>
 	  <title>Feedback Networks</title>
-      <meta property="og:image" content="https://phillipi.github.io/pix2pix/images/teaser_for_fb_v4.png"/>
+      <meta property="og:image" content="http://svl.stanford.edu/assets/images/pub/zamir_1612.09508.png"/>
       <meta property="og:title" content="Feedback Networks" />
   </head>
 
@@ -175,7 +176,7 @@ body {
   			  <tr>
   	              <td width=400px>
   					<center>
-					<iframe width="840" height="472" src="https://www.youtube.com/embed/g_qYLEl58bI?rel=0&autoplay=1&loop=1&showinfo=0&controls=2&playlist=g_qYLEl58bI" frameborder="0" allowfullscreen></iframe>					</center>
+					<iframe width="840" height="472" src="https://www.youtube.com/embed/g_qYLEl58bI?rel=0&autoplay=1&loop=1&showinfo=0&controls=2&playlist=g_qYLEl58bI&version=3" frameborder="0" allowfullscreen></iframe>					</center>
   	              </td>
                 </tr>
   	              <td width=400px>
@@ -196,14 +197,30 @@ body {
 	  		    </td>
 	  		  </tr>
 			</table>
-			Currently, the most successful learning models in computer vision are based on learning successive representations followed by a decision layer. This is usually actualized through feedforward multilayer neural networks, e.g. ConvNets, where each layer forms one of such successive representations. However, an alternative that can achieve the same goal is a feedback based approach in which the representation is formed in an iterative manner based on a feedback received from previous iteration's output.  
+Currently, the most successful learning models in computer vision are based on learning successive representations followed by a decision layer. This is usually actualized through feedforward multilayer neural networks, e.g. ConvNets, where each layer forms one of such successive representations. However, an alternative that can achieve the same goal is a feedback based approach in which the representation is formed in an iterative manner based on a feedback received from previous iteration's output.  
 	  <br>	  <br>
 
+We establish that a feedback based approach has several core advantages over feedforward: it enables making early predictions at the query time, its output naturally conforms to a hierarchical structure in the label space (e.g. a taxonomy), and it provides a new basis for Curriculum Learning. We observe that feedback develops a considerably different representation compared to feedforward counterparts, in line with the aforementioned advantages. We present a general feedback based learning architecture, instantiated using existing RNNs, with the endpoint results on par or better than current feedforward networks and the addition of the above advantages. 			      
 
-			We establish that a feedback based approach has several fundamental advantages over feedforward: it enables making early predictions at the query time, its output naturally conforms to a hierarchical structure in the label space (e.g. a taxonomy), and it provides a new basis for Curriculum Learning. We observe that feedback networks develop a considerably different representation compared to feedforward counterparts, in line with the aforementioned advantages. We put forth a general feedback based learning architecture with the endpoint results on par or better than existing feedforward networks with the addition of the above advantages. We also investigate several mechanisms in feedback architectures (e.g. skip connections in time) and design choices (e.g. feedback length). We hope this study offers new perspectives in quest for more natural and practical learning models.
   		  <br><br>
 		  <hr>
 
+
+ 		  <table align=center width=850px>
+	  		  <center><h1></h1></center>
+	  		  <tr>
+	  		  	<td>
+	  		    </td>
+	  		  </tr>
+			</table>
+&emsp; &#9679 &ensp;Blog post by <i>Severely Theoretical</i>: <a href="https://severelytheoretical.wordpress.com/2017/01/11/recurrence-as-an-efficient-way-to-achieve-depth-in-neural-networks/">Recurrence as an efficient way to achieve depth in neural networks</a>. See discussion in comments.  	  
+<br><br>
+
+&emsp; &#9679 &ensp;Discussion on importance of feedback based learning by <a href="http://dicarlolab.mit.edu/node/1">James DiCarlo</a> (MIT): <a href="https://youtu.be/ilbbVkIhMgo?t=37m13s">CVPR17 plenary talk</a> [37:13]. (talk independent of our publication)   	  
+
+<br><br>
+  		  <br><br>
+		  <hr>
 
 
 	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
@@ -213,7 +230,7 @@ body {
       	  <br>
  
   		  <table align=center width=300px>
-	 		<center><h1>Paper</h1></center>
+	 		<center><h1>Paper (CVPR17)</h1></center>
   			  <tr>
   	              <!--<td width=300px align=left>-->
 				  <!--<td><a href="https://arxiv.org/pdf/1612.09508.pdf"><img  style="height:150px" src="http://cs.stanford.edu/people/karpathy/densecap/densecap.png" style="width:100%;border: 1px solid #AAA;"/></a></td>-->
@@ -221,6 +238,15 @@ body {
 				  <a href="./feedback_networks_2016.pdf">
   					<img src="./resources/feedback_net_thumbnail.jpg" style="width:100%;border: 1px solid #AAA;">
 				  </a>
+
+	<center><h4>Supplementary Material</h4></center>
+  			  <tr>
+  	              <!--<td width=300px align=left>-->
+				  <!--<td><a href="https://arxiv.org/pdf/1612.09508.pdf"><img  style="height:150px" src="http://cs.stanford.edu/people/karpathy/densecap/densecap.png" style="width:100%;border: 1px solid #AAA;"/></a></td>-->
+				  <!--<td><span style="font-size:20pt"><a href="https://arxiv.org/pdf/1612.09508.pdf"><br>Download</a></td>-->
+				  <a href="http://feedbacknet.stanford.edu/supplementary_material/">
+  					<img src="./resources/feedback_net_thumbnailsup.jpg" style="width:100%;border: 1px solid #AAA;">
+				  </a>				  
 
   	              </td>
 
@@ -234,8 +260,10 @@ body {
 				  <td><span style="font-size:14pt"><center>
 				  	<a href="./feedback_networks_2016.pdf">[Paper]</a>
 				  	<a href="http://feedbacknet.stanford.edu/supplementary_material/">[Supplementary]</a>
-				  	<a href="./resources/feedback_networks_bibtex.txt">[Bibtex]</a>
-<br> CVPR 2017
+				  	<a href="./resources/html_slides/index.html">[Slides]</a>				  	
+				  	<a href="./resources/feedbacknet_poster_CVPR17.pdf">[Poster]</a>
+				  	<a href="./resources/feedback_networks_bibtex.txt">[Bibtex]</a>				  	
+<br> In CVPR 2017.
   	              </center></td>
               </tr>
   		  </table>
@@ -248,7 +276,7 @@ body {
   		  <table align=center width=800px>
 			  <tr><center>
 				<!-- <span style="font-size:28px">Code coming soon!</span></i>			  	 -->
-				<span style="font-size:28px">&nbsp;<a href='https://github.com/'>[GitHub]</a> (coming soon)
+				<span style="font-size:28px">&nbsp;<a href='https://github.com/amir32002/feedback-networks'>[GitHub]</a> (New!)
 
 			 </span></span><i></i>
 				<span style="font-size:28px"></a></span>
@@ -307,11 +335,9 @@ counter"></a></div></noscript>
  
 
 
+
+
  
-
-
-
-
 
 
 

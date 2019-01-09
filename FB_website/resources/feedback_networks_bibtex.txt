@@ -1,5 +1,5 @@
 @ARTICLE{2016arXiv161209508Z,
-   author = {{Zamir}, A.~R. and {Wu}, T.-L. and {Sun}, L. and {Shen}, W. and 
+   author = {{Zamir}, A.~R. and {Wu}, T.-L. and {Sun}, L. and {Shen}, W. and {Shi}, B.~E. and 
 	{Malik}, J. and {Savarese}, S.},
     title = "{Feedback Networks}",
   journal = {ArXiv e-prints},
